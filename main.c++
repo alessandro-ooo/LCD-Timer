@@ -1,3 +1,10 @@
+/*
+*
+*	AUTHOR: Alessandro Buonocore
+*	GITHUB REPOSITORY: https://github.com/alessandro-ooo/LCD-Timer
+*	TINKERCAD FILE: https://www.tinkercad.com/things/8gXjzF1gUxS-lcd-timer
+*
+*/
 
 #include <Adafruit_LiquidCrystal.h>
 
@@ -75,6 +82,9 @@ void loop() {
         delay(50);
 		seconds = (seconds - 5 <= 5) ? seconds = 5 : seconds -= 5;
 
+        printSeconds(seconds);
+  	}
+}
         printSeconds(seconds);
   	}
 }
