@@ -20,7 +20,6 @@ bool isCounting = false;
 
 Adafruit_LiquidCrystal timerLCD(0);
 
-
 void setup()
 {
 	pinMode(increaserBtnPin, INPUT);
@@ -41,8 +40,7 @@ void printSeconds (int number) {
 
 void tickLCD(int currentSeconds) {
   	
-  	for(int sec = currentSeconds; sec >= 0; sec--)
-    {
+  	for(int sec = currentSeconds; sec >= 0; sec--){
         delay(1000);
         seconds -= 1;
 
@@ -82,9 +80,6 @@ void loop() {
         delay(50);
 		seconds = (seconds - 5 <= 5) ? seconds = 5 : seconds -= 5;
 
-        printSeconds(seconds);
-  	}
-}
         printSeconds(seconds);
   	}
 }
